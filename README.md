@@ -1,171 +1,21 @@
-# ⚡ SESI - Controle de Consumo e Desperdício de Energia
-
-## 📌 Sobre o Projeto
-
-O projeto SESI - Sistema de Rastreamento de Consumo e Desperdício de Energia foi desenvolvido para registrar informações sobre o consumo de energia de equipamentos utilizados em diferentes locais.
-
-A API permite realizar operações de cadastro, consulta, alteração e exclusão dos equipamentos, além de possibilitar pesquisas por local e por equipamento.
-
----
-
-## 🎯 Objetivo
-
-O principal objetivo do projeto é organizar os dados de consumo de energia e facilitar o acompanhamento dos equipamentos.
-
-Com o sistema, é possível:
-
-- Cadastrar equipamentos;
-- Consultar os equipamentos registrados;
-- Pesquisar equipamentos por local;
-- Pesquisar pelo nome do equipamento;
-- Alterar informações;
-- Excluir registros;
-- Acompanhar o consumo em kWh.
-
----
-
-## 💻 Tecnologias
-
-- JavaScript
-- Node.js
-- Express
-- JSON
-- Thunder Client
-- Visual Studio Code
-- HTML
-
----
-
-## 📁 Organização do Projeto
-
-```text
-sesi_pbe1_vps01_tema_04
-│
-├── client
-│   └── index.html
-│
-├── prints
-│   ├── 01_get_todos.png
-│   ├── 02_get_id.png
-│   ├── 03_busca_equipamento.png
-│   ├── 04_busca_local.png
-│   ├── 05_post_cadastro.png
-│   ├── 06_put_atualizacao.png
-│   └── 07_delete.png
-│
-├── dados.json
-├── server.js
-├── package.json
-├── .gitignore
-└── README.md
-
-| Campo            | Função                                    |
-| ---------------- | ----------------------------------------- |
-| `id`             | Identifica cada registro                  |
-| `local`          | Indica onde o equipamento está localizado |
-| `equipamento`    | Nome do equipamento cadastrado            |
-| `consumo_kwh`    | Quantidade de energia consumida           |
-| `mes_referencia` | Mês referente ao registro                 |
-| `status`         | Indica a situação do consumo              |
-
-
-| Método | Endpoint                                 | Função                       |
-| ------ | ---------------------------------------- | ---------------------------- |
-| GET    | `/equipamentos`                          | Lista todos os equipamentos  |
-| GET    | `/equipamentos/:id`                      | Consulta pelo ID             |
-| GET    | `/equipamentos/local/:local`             | Pesquisa pelo local          |
-| GET    | `/equipamentos/equipamento/:equipamento` | Pesquisa pelo equipamento    |
-| POST   | `/equipamentos`                          | Adiciona um novo equipamento |
-| PUT    | `/equipamentos/:id`                      | Modifica um equipamento      |
-| DELETE | `/equipamentos/:id`                      | Remove um equipamento        |
-
-
-
-
-
-🧪 Testes com Thunder Client
-
-Os testes da API foram realizados utilizando o Thunder Client no Visual Studio Code.
-
-Teste 1 - GET Todos os Equipamentos
-
-Retorna todos os equipamentos cadastrados.
-
-GET http://localhost:3000/equipamentos
-🧪 Testes da API
-
-Os endpoints foram testados utilizando o Thunder Client no Visual Studio Code.
-
-1. Listagem dos equipamentos
-GET http://localhost:3000/equipamentos
-
-2. Consulta por ID
-GET http://localhost:3000/equipamentos/2
-
-3. Pesquisa por equipamento
-GET http://localhost:3000/equipamentos/equipamento/Computadores
-
-4. Pesquisa por local
-GET http://localhost:3000/equipamentos/local/Sala
-
-5. Cadastro de equipamento
-POST http://localhost:3000/equipamentos
-
-Exemplo de dados enviados:
-
-{
-    "local": "Laboratório 02",
-    "equipamento": "Projetor",
-    "consumo_kwh": 95.5,
-    "mes_referencia": "2026-09",
-    "status": "Normal"
-}
-
-6. Alteração de equipamento
-PUT http://localhost:3000/equipamentos/2
-
-Dados utilizados:
-
-{
-    "local": "Sala 05",
-    "equipamento": "Computadores",
-    "consumo_kwh": 180.5,
-    "mes_referencia": "2026-09",
-    "status": "Consumo elevado"
-}
-
-7. Exclusão de equipamento
-DELETE http://localhost:3000/equipamentos/2
-
-🌐 Página HTML
-
-O projeto possui uma página para realizar o cadastro dos equipamentos.
-
-Arquivo utilizado:
-
-client/index.html
-
-Nela é possível preencher os dados do equipamento e enviar as informações para a API.
-
-▶️ Como Rodar o Projeto
-
-Primeiro, abra o terminal na pasta do projeto e instale as dependências:
-
-npm install
-
-Depois execute o servidor:
-
-node server.js
-
-A API ficará disponível em:
-
-http://localhost:3000
-
-Para visualizar o formulário, abra:
-
-client/index.html
-⚡ Tema
-
-Sistema de Rastreamento de Consumo e Desperdício de Energia
-
-O projeto busca facilitar o registro e a consulta do consumo energético dos equipamentos, permitindo organizar as informações por local, equipamento, mês e status.
+🚀 Projeto PBE1 - VPS01 (Tema 2026)Repositório criado para a entrega da VPS01 (Validação Prática de Cursos Tecnológicos) da disciplina de Programação Backend I (PBE1) - SESI / SENAI.📌 Sobre o ProjetoO objetivo deste projeto é construir um serviço web contendo uma API backend em Node.js com operações CRUD completas (Create, Read, Update, Delete) utilizando armazenamento em arquivo JSON (dados.json), além de uma interface Web simples integrada no frontend.📂 Estrutura do RepositórioCom base na arquitetura do projeto:.
+├── client/
+│   └── indux.html     # Frontend / Interface do usuário
+├── prints/            # Evidências e testes das rotas
+│   ├── create.png     # Teste de criação (POST)
+│   ├── delete.png     # Teste de deleção (DELETE)
+│   ├── envio.png      # Teste de requisição/envio
+│   ├── find.png       # Teste de busca específica por ID
+│   ├── read.png       # Teste de listagem geral (GET)
+│   ├── update.png     # Teste de atualização (PUT)
+│   └── web.png        # Demonstração da aplicação rodando na web
+├── .gitignore         # Arquivos ignorados pelo Git
+├── README.md          # Documentação do projeto
+├── dados.json         # Arquivo de persistência de dados
+├── package.json       # Dependências e scripts do Node.js
+└── server.js          # Arquivo principal do servidor Backend
+⚙️ Como Executar o Projeto1. Pré-requisitosCertifique-se de ter instalado:Node.js (versão 18 ou superior)2. Passos para execuçãoClone o repositório:git clone https://github.com/Tobiasbueno18/sesi_pbe1_vps01_tema_2026.git
+Acesse a pasta do projeto:cd sesi_pbe1_vps01_tema_2026
+Instale as dependências:npm install
+Inicie o servidor:npm start
+(ou node server.js / npx nodemon server.js dependendo do script configurado)Acesse no navegador:Interface Web: http://localhost:3000 (servindo o client/indux.html)🛣️ Rotas da API (Endpoints)OperaçãoMétodoEndpointDescriçãoCreatePOST/ ou /apiCria um novo registro no dados.jsonRead AllGET/ ou /apiListagem completa dos registrosFindGET/:idBusca um registro pelo IDUpdatePUT/:idAtualiza as informações de um registroDeleteDELETE/:idRemove um registro pelo ID📸 Evidências dos Testes (Prints)🌐 Interface Web (web.png)➕ Criar Registro (create.png)🔍 Buscar Registros (read.png e find.png)Listagem GeralBusca por ID✏️ Atualizar Registro (update.png)🗑️ Deletar Registro (delete.png)✒️ AutorDesenvolvido para a avaliação VPS01 da disciplina Programação Backend I (PBE1) - SESI / SENAI 2026.
