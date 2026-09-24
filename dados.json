@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "local": "Laboratório 03",
+        "equipamento": "Ar-condicionado",
+        "consumo_kwh": 185.4,
+        "mes_referencia": "2026-09",
+        "status": "Consumo elevado"
+    },
+    {
+        "id": 2,
+        "local": "Sala 05",
+        "equipamento": "Computadores",
+        "consumo_kwh": 120.8,
+        "mes_referencia": "2026-09",
+        "status": "Normal"
+    },
+    {
+        "id": 3,
+        "local": "Laboratório 01",
+        "equipamento": "Projetor",
+        "consumo_kwh": 75.5,
+        "mes_referencia": "2026-09",
+        "status": "Normal"
+    },
+    {
+        "id": 4,
+        "local": "Blibioteca",
+        "equipamento": "Ar-condicionado",
+        "consumo_kwh": 210.3,
+        "mes_referencia": "2026-09",
+        "status": "Consumo elevado"
+    },
+    {
+        "id": 5,
+        "local": "Sala 10",
+        "equipamento": "Computadores",
+        "consumo_kwh": 98.6,
+        "mes_referencia": "2026-09",
+        "status": "Normal"
+    }
+]
